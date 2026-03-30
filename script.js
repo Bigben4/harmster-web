@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const cartString = cart.map(item => `- ${item.name} ($${item.price.toFixed(2)})`).join('\n');
             const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-            const whatsappNumber = '671807750'; // Use full business number with country code, e.g. 671807750
+            const whatsappNumber = '237671807750'; // Use full business number with country code, e.g. 671807750
             let messageText = `Hello, I would like to order from Happy Paws Hamstery.\n\n`;
             messageText += `Customer name: ${name}\n`;
             messageText += `Phone: ${phone}\n`;
