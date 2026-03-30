@@ -582,7 +582,10 @@ h1, h2, h3, .logo {
 /* Responsive mobile/flex layout */
 @media (max-width: 900px) {
     .cart-icon {
-        display: none;
+        display: block;
+        padding: 0.45rem 0.7rem;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
     }
 
     .navbar {

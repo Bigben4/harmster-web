@@ -243,16 +243,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const cartString = cart.map(item => `- ${item.name} ($${item.price.toFixed(2)})`).join('\n');
             const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-            const whatsappNumber = '671807750'; // delivery number in international format
-            let message = `Hello, I would like to order from Happy Paws Hamstery.%0A%0A`;
-            message += `Customer name: ${encodeURIComponent(name)}%0A`;
-            message += `Phone: ${encodeURIComponent(phone)}%0A`;
-            message += `Address: ${encodeURIComponent(address)}%0A`;
-            if (note) message += `Note: ${encodeURIComponent(note)}%0A`;
-            message += `%0ACart items:%0A${encodeURIComponent(cartString)}%0A%0ATotal: $${total}`;
+            const whatsappNumber = '671807750'; // Use full business number with country code, e.g. 671807750
+            let messageText = `Hello, I would like to order from Happy Paws Hamstery.\n\n`;
+            messageText += `Customer name: ${name}\n`;
+            messageText += `Phone: ${phone}\n`;
+            messageText += `Address: ${address}\n`;
+            if (note) messageText += `Note: ${note}\n`;
+            messageText += `\nCart items:\n${cartString}\n\nTotal: $${total}`;
 
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-            window.location.href = whatsappUrl;
+            const encodedText = encodeURIComponent(messageText);
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedText}`;
+            window.open(whatsappUrl, '_blank');
         });
     }
 });
