@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Available Hamsters at Happy Paws Hamstery.">
+    <title>Catalog - Happy Paws Hamstery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Happy Paws Hamstery</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html" class="active">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+        <div class="cart-icon" id="cart-btn">
+            Cart <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <h1 class="page-title fade-in">Meet Our Hamsters</h1>
+    
+    <div class="catalog-grid">
+        <!-- Syrian Hamster -->
+        <div class="hamster-card fade-in" data-id="h1">
+            <img src="image/syrian.jpg" alt="Syrian Hamster" class="hamster-img">
+            <div class="hamster-info">
+                <span class="breed-tag">Syrian Hamster</span>
+                <h3 class="hamster-name">Peanut</h3>
+                <p class="hamster-origin"><strong>Origin:</strong> Hugs-from-Syria, snuggle-ready.</p>
+                <p class="hamster-desc">Peanut is fluffy, gentle, and loves to sit on your palm for story time. Ideal for first-time hamster lovers and kids who enjoy calm cuddles.</p>
+                <p class="price">$45.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Roborovski Dwarf -->
+        <div class="hamster-card fade-in" data-id="h2">
+            <img src="image/roborovski.jpg" alt="Roborovski Hamster" class="hamster-img">
+            <div class="hamster-info">
+                <span class="breed-tag">Roborovski Dwarf</span>
+                <h3 class="hamster-name">Dash</h3>
+                <p class="hamster-origin"><strong>Origin:</strong> Tiny desert rockets, forever zooming.</p>
+                <p class="hamster-desc">Dash is a tiny speedster that zips with joy and makes every playtime a laughter show. Great for kids who love active pals and watching cute agility races.</p>
+                <p class="price">$35.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Winter White Dwarf -->
+        <div class="hamster-card fade-in" data-id="h3">
+            <img src="image/winter_white.jpg" alt="Winter White Hamster" class="hamster-img">
+            <div class="hamster-info">
+                <span class="breed-tag">Winter White Dwarf</span>
+                <h3 class="hamster-name">Snowball</h3>
+                <p class="hamster-origin"><strong>Origin:</strong> Fluffy cloud prince from snowy lands.</p>
+                <p class="hamster-desc">Snowball is like a cuddly snowflake who loves gentle pets and quiet bedtime stories. Perfect for families who want a soft and snuggly friend.</p>
+                <p class="price">$40.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Campbell's Dwarf -->
+        <div class="hamster-card fade-in" data-id="h4">
+            <img src="image/campbell.jpg" alt="Campbell's Dwarf Hamster" class="hamster-img">
+            <div class="hamster-info">
+                <span class="breed-tag">Campbell's Dwarf</span>
+                <h3 class="hamster-name">Biscuit</h3>
+                <p class="hamster-origin"><strong>Origin:</strong> Little adventurers from the warm steppes.</p>
+                <p class="hamster-desc">Biscuit is a playful munchkin with a cheeky sparkle. He’s curious, mischievous, and great for kids who love sweet, bold little friends.</p>
+                <p class="price">$40.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Chinese Hamster -->
+        <div class="hamster-card fade-in" data-id="h5">
+            <img src="image/chinese.jpg" alt="Chinese Hamster" class="hamster-img">
+            <div class="hamster-info">
+                <span class="breed-tag">Chinese Hamster</span>
+                <h3 class="hamster-name">Noodle</h3>
+                <p class="hamster-origin"><strong>Origin:</strong> Nimble tail-twirler from distant hills.</p>
+                <p class="hamster-desc">Noodle is a gentle explorer that loves to climb and discover new chew toys. She warms up quickly and gives the sweetest little kisses once comfortable.</p>
+                <p class="price">$50.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart Modal overlay -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p class="total">Total: $<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout form...')">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

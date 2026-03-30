@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Checkout - Happy Paws Hamstery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Happy Paws Hamstery</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="active">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="featured-section">    
+        <h2 class="section-title">Cart and Delivery Information</h2>
+
+        <section class="page-container" id="checkout-cart">
+            <h3>Your Selected Hamsters</h3>
+            <div id="page-cart-items" style="margin-bottom: 1.5rem;"></div>
+            <p><strong>Total:</strong> $<span id="page-cart-total">0.00</span></p>
+            
+            <h3>Delivery Information</h3>
+            <form id="delivery-form" class="contact-form">
+                <label for="delivery-name">Full Name</label>
+                <input type="text" id="delivery-name" required placeholder="Jane Doe">
+
+                <label for="delivery-phone">Phone Number</label>
+                <input type="tel" id="delivery-phone" required placeholder="+1 555-123-4567">
+
+                <label for="delivery-address">Delivery Address</label>
+                <textarea id="delivery-address" rows="3" required placeholder="123 Hamster Lane, City, State"></textarea>
+
+                <label for="delivery-note">Additional Notes (optional)</label>
+                <textarea id="delivery-note" rows="2" placeholder="Gift wrap, preferred delivery time, etc."></textarea>
+
+                <button type="submit" class="checkout-btn">Order</button>
+            </form>
+
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #444;">After submitting, you will be redirected to WhatsApp with your order details prefilled.</p>
+        </section>
+    </main>
+</body>
+</html>

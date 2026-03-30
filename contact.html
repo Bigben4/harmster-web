@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Happy Paws Hamstery.">
+    <title>Contact - Happy Paws Hamstery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Happy Paws Hamstery</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+        <div class="cart-icon" id="cart-btn">
+            Cart <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <div class="page-container fade-in">
+        <h1>Contact Us</h1>
+        <p>If you have any questions about our hamsters, the adoption process, or general hamster care, please fill out the form below. As the sole owner and breeder, I will personally respond to your inquiry as soon as possible.</p>
+        
+        <form class="contact-form" id="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required placeholder="Jane Doe">
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required placeholder="jane@example.com">
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" required placeholder="Hello, I am interested in adopting..."></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Cart Modal overlay -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p class="total">Total: $<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout form...')">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

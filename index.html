@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Happy Paws Hamstery - Ethical breeder of healthy and happy hamsters in the US.">
+    <title>Happy Paws Hamstery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Happy Paws Hamstery</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+        <div class="cart-icon" id="cart-btn" role="button" aria-label="Open cart">Cart</div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-left slide-in-left">
+            <h1>Welcome to Happy Paws Hamstery</h1>
+            <p>Snuggle-ready hamsters raised with love and fun, perfect for both kids & grown-ups. Join the family and bring home a tiny friend who’ll brighten every day!</p>
+            <a href="catalog.html" class="buy-button">Explore Adorable Hamsters</a>
+        </div>
+        <div class="hero-right slide-in-right">
+            <img src="image/owner_holding.jpg" alt="Owner holding a hamster gently" class="hero-image">
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="feature slide-in-left">
+            <h3>Ethically Bred</h3>
+            <p>We prioritize the health and genetic history of every pup.</p>
+        </div>
+        <div class="feature scale-in">
+            <h3>Well Socialized</h3>
+            <p>Raised with love and handled daily for the best environment.</p>
+        </div>
+        <div class="feature slide-in-right">
+            <h3>Lifetime Support</h3>
+            <p>We ensure you have everything needed to care for your new friend.</p>
+        </div>
+    </section>
+
+    <section class="featured-section" id="featured">
+        <h2 class="section-title fade-in">Featured Hamsters</h2>
+        <div class="catalog-grid">
+            <div class="hamster-card fade-in" data-id="h1">
+                <img src="image/syrian.jpg" alt="Syrian Hamster" class="hamster-img">
+                <div class="hamster-info">
+                    <span class="breed-tag">Syrian Hamster</span>
+                    <h3 class="hamster-name">Peanut</h3>
+                    <p class="hamster-desc">Docile and easy to handle.</p>
+                    <p class="price">$45.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="hamster-card fade-in" data-id="h2">
+                <img src="image/roborovski.jpg" alt="Roborovski Hamster" class="hamster-img">
+                <div class="hamster-info">
+                    <span class="breed-tag">Roborovski Dwarf</span>
+                    <h3 class="hamster-name">Dash</h3>
+                    <p class="hamster-desc">Very active and incredibly entertaining.</p>
+                    <p class="price">$35.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="hamster-card fade-in" data-id="h3">
+                <img src="image/winter_white.jpg" alt="Winter White Hamster" class="hamster-img">
+                <div class="hamster-info">
+                    <span class="breed-tag">Winter White Dwarf</span>
+                    <h3 class="hamster-name">Snowball</h3>
+                    <p class="hamster-desc">Round, sweet, and tolerant of handling.</p>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="catalog.html" class="cta-button scale-in">See All Hamsters</a>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="page-container slide-in-left">
+            <h2>Our Story</h2>
+            <p>Welcome to Happy Paws Hamstery! We are a cozy family hamstery in the USA where kids and grown-ups both fall in love with pint-sized buddies. Every hamster is loved, handled gently, and taught to be calm, curious, and full of heart.</p>
+            <p><strong>Please note:</strong> I am the sole owner and seller of all hamsters shown on this site, so you get personal insight from the person who cares for them daily. This means honest, responsible, and kid-friendly support for everyone looking for their forever friend.</p>
+            <a href="about.html" class="link-btn">Read More</a>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="page-container slide-in-right">
+            <h2>Get In Touch</h2>
+            <p>If you have any questions about our hamsters or the adoption process, please reach out.</p>
+            <form class="contact-form" id="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="Jane Doe">
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required placeholder="jane@example.com">
+                
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="5" required placeholder="Hello, I am interested in adopting..."></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Modal overlay -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p class="total">Total: $<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout form...')">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

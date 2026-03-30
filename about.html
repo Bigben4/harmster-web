@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Happy Paws Hamstery.">
+    <title>About Us - Happy Paws Hamstery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Happy Paws Hamstery</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+        <div class="cart-icon" id="cart-btn">
+            Cart <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <div class="page-container fade-in">
+        <h1>Our Story</h1>
+        <p>Welcome to Happy Paws Hamstery, where every hamster is nurtured with care, kindness, and big cuddles. Our family-run home in the United States is a happy haven for fluffy friends, and we carefully raise Syrian, Roborovski, Winter White, Campbell's, and Chinese hamsters to be safe, snuggly, and full of personality.</p>
+        <p><strong>Please note:</strong> I am the sole owner and seller of all the hamsters shown on this site, so you deal directly with the person who raises each little buddy. This means honest, warm, and transparent advice about health, genetics, and temperament from day one.</p>
+        <p>We believe in healthy hearts, joyful playtime, and lifetime love. Whether you're a child dreaming of a new little amigo or an adult looking for a gentle companion, our hamsters are raised with emotional support, definitely not for profit, and every adopter becomes part of the Happy Paws family.</p>
+    </div>
+
+    <!-- Cart Modal overlay -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p class="total">Total: $<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout form...')">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
